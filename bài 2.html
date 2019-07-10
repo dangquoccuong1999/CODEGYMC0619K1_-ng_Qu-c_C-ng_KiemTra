@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number = parseInt(prompt('Bạn muốn nhập bao nhiêu số :'));
+    let arrNumber = [];
+    let arrSoNguyeTo = [];
+    for (let i = 0; i < number; i++) {
+        arrNumber[i] = parseInt(prompt('Nhập số :'));
+    }
+
+    function listPrimes() {
+        for (let i = 0; i < number; i++) {
+            if (isPrime(arrNumber[i]) == true) {
+                arrSoNguyeTo.push(arrNumber[i]);
+            }
+        }
+    }
+
+    function isPrime(number) {
+        if (number < 2) {
+            return false;
+        }
+        for (let i = 2; i < number; i++) {
+            if (number % 2 == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+    listPrimes();
+    document.write("Mảng đầu vào là:  "+ arrNumber);
+    document.write("Mảng số nguyên tố là: "+ arrSoNguyeTo);
+</script>
+</body>
+</html>

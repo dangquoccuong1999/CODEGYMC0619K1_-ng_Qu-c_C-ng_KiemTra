@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number = Number(prompt('Mời bạn nhập số lượng mảng: '));
+    let arrNumber1 = [];
+    let sum = 0;
+    for (let i = 0; i < number; i++) {
+        arrNumber1[i] = [];
+        for (let j = 0; j < number; j++) {
+            arrNumber1[i][j] = Number(prompt('Mời bạn nhập số vào mảng: '));
+        }
+    }
+    console.log(arrNumber1);
+    for (i = 0; i < number; i++) {
+        for (j = 0; j < number; j++) {
+            if (i == j)
+                sum = sum + arrNumber1[i][j];
+        }
+    }
+    document.write(sum);
+
+</script>
+</body>
+</html>

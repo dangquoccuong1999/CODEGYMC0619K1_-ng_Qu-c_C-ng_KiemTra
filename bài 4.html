@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arrDao = [];
+    let number = Number(prompt('Mời bạn nhập số lượng mảng: '));
+    let arrNumber1 = [];
+
+    function createArray() {
+        for (let i = 0; i < number; i++) {
+            arrNumber1[i] = [];
+            for (let j = 0; j < number; j++) {
+                arrNumber1[i][j] = Number(prompt('Mời bạn nhập số vào mảng: '));
+            }
+        }
+        console.log(arrNumber1);
+    }
+    createArray();
+    for (let i = 0; i < number; i++) {
+        for (let j = 0; j < number; j++) {
+            if (i % 2 != 0) {
+                arrDao.push(arrNumber1[i][j].reverse())
+            }
+            else {
+                arrDao.push(arrNumber1[i])
+            }
+
+        }
+    }
+
+    console.log(arrDao);
+
+</script>
+</body>
+</html>
